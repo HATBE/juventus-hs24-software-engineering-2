@@ -1,5 +1,6 @@
 package ch.hatbe.juventus.object;
 
+import java.io.IOError;
 import java.util.Objects;
 
 public class Address {
