@@ -17,6 +17,10 @@ public class Person {
         this.hasPet = hasPet;
     }
 
+    public int getAge() {
+        return age;
+    }
+
     @Override
     public String toString() {
         return String.format("Person{firstName: %s, lastName: %s, address: %s, age: %s, hasPet: %s}", firstName, lastName, address, age, hasPet);
