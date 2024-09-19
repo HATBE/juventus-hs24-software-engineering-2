@@ -2,6 +2,7 @@ package ch.hatbe.juventus.javadoc;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -16,7 +17,7 @@ class MathUtilTest {
     @ParameterizedTest
     @ValueSource(ints = {1, 2, 3, 4, 5})
     void numbers(int candidate) {
-        assertTrue(candidate == 1 || candidate == 2 || candidate == 3 || candidate == 4 || candidate == 5);
+        assertTrue(candidate > 0 && candidate < 6);
     }
 
     @BeforeEach
@@ -50,5 +51,11 @@ class MathUtilTest {
     public void testMultiplication() {
         assertEquals(20, this.mathUtil.multiplication(10, 2), "failed multiplication");
         assertEquals(30, this.mathUtil.multiplication(5, 6), "failed multiplication");
+    }
+
+    @DisplayName("Test Repetition")
+    @RepeatedTest(value = 10, name = "{displayName} {currentRepetition}/{totalRepetitions}")
+    void repeatedTest() {
+        assertEquals(4, 2 + 2);
     }
 }
