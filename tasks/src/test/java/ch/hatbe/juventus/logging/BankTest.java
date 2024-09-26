@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class BankTest {
 
-    Bank bank;
+    private Bank bank;
 
     @BeforeEach
     public void setUp() {
