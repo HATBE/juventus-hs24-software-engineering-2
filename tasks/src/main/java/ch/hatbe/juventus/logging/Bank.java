@@ -22,4 +22,9 @@ public class Bank {
         logger.debug("balance {}", this.balance);
         return this.balance;
     }
+
+    public static void main(String[] args) {
+        Bank bank = new Bank();
+        bank.retriveBalance();
+    }
 }
