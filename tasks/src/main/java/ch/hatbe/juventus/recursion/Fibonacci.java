@@ -12,6 +12,7 @@ public class Fibonacci {
         return fib;
     }
 
+
     private static int fib2(int n) {
         if (n <= 1) {
             return n;

@@ -21,6 +21,14 @@ public class Person {
         return age;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
     @Override
     public String toString() {
         return String.format("Person{firstName: %s, lastName: %s, address: %s, age: %s, hasPet: %s}", firstName, lastName, address, age, hasPet);
