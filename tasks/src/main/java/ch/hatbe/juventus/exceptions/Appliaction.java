@@ -9,11 +9,15 @@ public class Appliaction {
         try {
             Person person = personRepository.findById(1);
         } catch (PersonNotFoundException e) {
-            e.printStackTrace();
+
             System.out.println("Exception: " + e.getMessage());
         }
 
-        Person person = personRepository.addPeron(null);
+        try {
+            Person person = personRepository.addPeron(null);
+        } catch (IllegalArgumentException e) {
+            System.out.println("test12");
+        }
     }
 
 }
