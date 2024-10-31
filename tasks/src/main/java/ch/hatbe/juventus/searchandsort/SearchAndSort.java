@@ -8,9 +8,9 @@ import java.util.List;
 
 public class SearchAndSort {
     public static void main(String[] args) {
-
-       sort();
-        search();    }
+           sort();
+        search();
+    }
 
     private static void search() {
         PhoneBook phoneBook = new PhoneBook();
