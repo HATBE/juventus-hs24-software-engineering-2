@@ -79,6 +79,7 @@ public class NioExcercises {
         String file = "/home/ag/test/person.ser";
         ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(file));
         out.writeObject(person);
+        out.close();
     }
 
     public static void deserializePerson() throws IOException, ClassNotFoundException {
@@ -86,5 +87,6 @@ public class NioExcercises {
         ObjectInputStream in = new ObjectInputStream(new FileInputStream(file));
         Person person = (Person) in.readObject();
         System.out.println(person);
+        in.close();
     }
 }
